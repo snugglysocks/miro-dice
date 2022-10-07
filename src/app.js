@@ -1,7 +1,7 @@
 async function RollDie() {
   
   await miro.board.ui.on("drop", async ({ x, y, target}) => {
-    const shapes ={4:"triangle",6:"rectangle",8:"trapezoid",10:"pentagon",12:"hexagon",20:"octagon"}
+    const shapes = {4:"triangle",6:"rectangle",8:"trapezoid",10:"pentagon",12:"hexagon",20:"octagon"}
 
     const dieSize = target.id;
     const dieShape = shapes[dieSize];
@@ -12,7 +12,7 @@ async function RollDie() {
       const Die = await miro.board.createShape({
         x,
         y,
-        content: dieSize.toString(),
+        content: ranmdomNumber.toString(),
         shape: dieShape,
       });
     } catch (error) {
